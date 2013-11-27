@@ -1,6 +1,9 @@
 package com.leetcode.huangcd;
 
+import com.carrotsearch.junitbenchmarks.BenchmarkRule;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestRule;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,6 +19,8 @@ import static org.junit.Assert.assertArrayEquals;
  * @author chhuang@microsoft.com
  */
 public class SortListTest {
+    @Rule
+    public TestRule benchmarkRun = new BenchmarkRule();
 
     @Test
     public void testSortList() throws Exception {
