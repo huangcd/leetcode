@@ -1,8 +1,5 @@
 package com.leetcode.huangcd;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Date: 11/27/13
  * Time: 3:08 PM
@@ -10,28 +7,6 @@ import java.util.List;
  * @author chhuang@microsoft.com
  */
 public class SortList {
-
-    public static List<Integer> listNodeToList(ListNode head) {
-        List<Integer> list = new ArrayList<>();
-        while (head != null) {
-            list.add(head.val);
-            head = head.next;
-        }
-        return list;
-    }
-
-    public static ListNode listToListNode(List<Integer> list) {
-        if (list == null || list.isEmpty()) {
-            return null;
-        }
-        ListNode head = new ListNode(list.get(0));
-        ListNode current = head;
-        for (int i = 1; i < list.size(); i++) {
-            current.next = new ListNode(list.get(i));
-            current = current.next;
-        }
-        return head;
-    }
 
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {
@@ -71,20 +46,5 @@ public class SortList {
         }
         smaller.next = pivot;
         return head;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-
-        @Override
-        public String toString() {
-            return val + ", " + (next == null ? "" : next.toString());
-        }
     }
 }

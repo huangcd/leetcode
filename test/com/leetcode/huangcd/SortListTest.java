@@ -27,12 +27,12 @@ public class SortListTest {
         List<Integer> list = Arrays.asList(2, 3, 1, 2, 4, 5);
         List<Integer> sortedList = new ArrayList<>(list);
         Collections.sort(sortedList);
-        assertArrayEquals(sortedList.toArray(), SortList.listNodeToList(new SortList().sortList(SortList.listToListNode(list))).toArray());
+        assertArrayEquals(sortedList.toArray(), ListNode.toList(new SortList().sortList(ListNode.fromList(list))).toArray());
     }
 
     @Test
     public void testCreation() throws Exception {
         List<Integer> list = Arrays.asList(2, 3, 1, 2, 4, 5);
-        assertArrayEquals(list.toArray(), SortList.listNodeToList(SortList.listToListNode(list)).toArray());
+        assertArrayEquals(list.toArray(), ListNode.toList(ListNode.fromList(list)).toArray());
     }
 }
