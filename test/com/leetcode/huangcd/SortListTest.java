@@ -1,6 +1,5 @@
 package com.leetcode.huangcd;
 
-import com.sun.javafx.collections.transformation.SortedList;
 import org.junit.Test;
 
 import java.util.ArrayList;

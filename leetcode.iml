@@ -17,6 +17,8 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="junitperf-1.9.1" level="project" />
+    <orderEntry type="library" name="junit-benchmarks-0.7.0" level="project" />
   </component>
 </module>
 
