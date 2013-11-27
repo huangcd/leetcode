@@ -1,1 +1,4 @@
-This file was created by IntelliJ IDEA 12.1.6 for binding GitHub repository
+# LeetCode
+### chhuang at live dot cn
+
+**solutions for leetcode problem**
