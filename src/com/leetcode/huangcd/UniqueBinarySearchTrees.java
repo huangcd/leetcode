@@ -4,7 +4,7 @@ package com.leetcode.huangcd;
  * Date: 11/27/13
  * Time: 5:19 PM
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  *         <p/>
  *         Given n, how many structurally unique BST's (binary search trees) that store values 1...n?
  *         <p/>

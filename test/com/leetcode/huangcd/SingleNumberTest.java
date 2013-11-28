@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
  * Date: 11/27/13
  * Time: 2:58 PM
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class SingleNumberTest {
 

@@ -4,7 +4,7 @@ package com.leetcode.huangcd;
  * Date: 11/27/13
  * Time: 5:09 PM
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  *         Given two binary trees, write a function to check if they are equal or not.
  *         <p/>
  *         Two binary trees are considered equal if they are structurally identical and the nodes have the same value.

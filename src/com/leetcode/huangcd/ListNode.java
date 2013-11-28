@@ -7,7 +7,7 @@ import java.util.List;
  * Date: 11/27/13
  * Time: 5:47 PM
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class ListNode {
     int val;

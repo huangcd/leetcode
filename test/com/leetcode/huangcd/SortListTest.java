@@ -16,7 +16,7 @@ import static org.junit.Assert.assertArrayEquals;
  * Date: 11/27/13
  * Time: 3:18 PM
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class SortListTest {
     @Rule

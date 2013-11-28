@@ -4,7 +4,7 @@ package com.leetcode.huangcd;
  * Date: 11/27/13
  * Time: 2:55 PM
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class SingleNumberII {
 

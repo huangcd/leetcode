@@ -3,13 +3,11 @@ package com.leetcode.huangcd;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Arrays;
-
 /**
  * Date: 11/27/13
  * Time: 5:50 PM
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class MergeTwoSortedListsTest {
     private final static String TAG = MergeTwoSortedListsTest.class.getName();

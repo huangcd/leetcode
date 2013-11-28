@@ -4,7 +4,7 @@ package com.leetcode.huangcd;
  * Date: 11/27/13
  * Time: 5:33 PM
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  *         <p/>
  *         Given a sorted linked list, delete all duplicates such that each element appear only once.
  *         <p/>

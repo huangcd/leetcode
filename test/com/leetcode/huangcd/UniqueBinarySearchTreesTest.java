@@ -7,7 +7,7 @@ import org.junit.Test;
  * Date: 11/27/13
  * Time: 5:24 PM
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class UniqueBinarySearchTreesTest {
 
