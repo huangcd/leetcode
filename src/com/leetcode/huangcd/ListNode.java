@@ -19,7 +19,7 @@ public class ListNode {
     }
 
     public static List<Integer> toList(ListNode head) {
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<Integer>();
         while (head != null) {
             list.add(head.val);
             head = head.next;

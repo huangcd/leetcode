@@ -25,7 +25,7 @@ public class SortListTest {
     @Test
     public void testSortList() throws Exception {
         List<Integer> list = Arrays.asList(2, 3, 1, 2, 4, 5);
-        List<Integer> sortedList = new ArrayList<>(list);
+        List<Integer> sortedList = new ArrayList<Integer>(list);
         Collections.sort(sortedList);
         assertArrayEquals(sortedList.toArray(), ListNode.toList(new SortList().sortList(ListNode.fromList(list))).toArray());
     }
