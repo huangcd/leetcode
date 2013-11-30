@@ -5,11 +5,11 @@ package com.leetcode.huangcd;
  * <p/>
  * Time: 11:28 PM
  * <p/>
- * Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
+ * Find the contiguous subArray within an array (containing at least one number) which has the largest sum.
  * <p/>
  * For example, given the array [−2,1,−3,4,−1,2,1,−5,4],
  * <p/>
- * the contiguous subarray [4,−1,2,1] has the largest sum = 6.
+ * the contiguous subArray [4,−1,2,1] has the largest sum = 6.
  * <p/>
  * If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
  *
