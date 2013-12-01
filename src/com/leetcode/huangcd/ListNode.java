@@ -18,6 +18,15 @@ public class ListNode {
         next = null;
     }
 
+    public List<Integer> toList() {
+        return toList(this);
+    }
+
+    public Integer[] toArray() {
+        List<Integer> integers = toList(this);
+        return integers.toArray(new Integer[integers.size()]);
+    }
+
     public static List<Integer> toList(ListNode head) {
         List<Integer> list = new ArrayList<Integer>();
         while (head != null) {
