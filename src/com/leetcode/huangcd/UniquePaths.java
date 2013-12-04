@@ -11,7 +11,7 @@ package com.leetcode.huangcd;
  * <p/>
  * How many possible unique paths are there?
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class UniquePaths {
     public int uniquePaths(int m, int n) {

@@ -6,7 +6,7 @@ package com.leetcode.huangcd;
  * Time: 9:59 AM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class SortColors {
     public void sortColors(int[] A) {

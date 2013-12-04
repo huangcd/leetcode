@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Time: 1:52 PM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class Combinations {
     public ArrayList<ArrayList<Integer>> combine(int n, int k) {

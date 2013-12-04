@@ -6,7 +6,7 @@ package com.leetcode.huangcd;
  * Time: 1:49 PM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class RandomListNode {
     int label;

@@ -11,7 +11,7 @@ import org.junit.Test;
  * Time: 2:06 PM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class CombinationsTest {
     @Rule

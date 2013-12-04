@@ -12,7 +12,7 @@ import java.util.HashMap;
  * <p/>
  * Return a deep copy of the list.
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class CopyListWithRandomPointer {
     public RandomListNode copyRandomList(RandomListNode head) {

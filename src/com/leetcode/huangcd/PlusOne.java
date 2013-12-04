@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Time: 9:14 AM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class PlusOne {
     public int[] plusOne(int[] digits) {

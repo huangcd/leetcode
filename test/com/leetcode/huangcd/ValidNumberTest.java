@@ -9,7 +9,7 @@ import org.junit.Test;
  * Time: 5:16 PM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class ValidNumberTest {
     private final static String TAG = ValidNumberTest.class.getName();

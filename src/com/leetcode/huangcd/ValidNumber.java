@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
  * <p/>
  * Note: It is intended for the problem statement to be ambiguous. You should gather all requirements up front before implementing one.
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class ValidNumber {
     Pattern decimalPattern = Pattern.compile("[+-]?[0-9]+(\\.[0-9]*)?(e[0-9]*)?", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);

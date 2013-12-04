@@ -26,7 +26,7 @@ import java.util.ArrayList;
  *   [3],
  * ]
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class BinaryTreeLevelOrderTraversalII {
     public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {

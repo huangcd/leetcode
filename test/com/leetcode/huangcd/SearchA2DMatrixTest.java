@@ -9,7 +9,7 @@ import org.junit.Test;
  * Time: 8:57 AM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class SearchA2DMatrixTest {
 

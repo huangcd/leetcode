@@ -8,7 +8,7 @@ import java.util.HashMap;
  * Time: 7:55 PM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class BinaryTreeMaximumPathSum {
     // KEY1: use global variable to represent multi return

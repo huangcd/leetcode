@@ -9,7 +9,7 @@ import org.junit.Test;
  * Time: 4:57 PM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class TrappingRainWaterTest {
 

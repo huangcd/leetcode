@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Time: 9:26 AM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class SetMatrixZeroes {
     public void setZeroes(int[][] matrix) {

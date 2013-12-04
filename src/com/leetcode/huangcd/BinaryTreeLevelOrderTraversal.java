@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * Time: 9:01 AM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class BinaryTreeLevelOrderTraversal {
     public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {

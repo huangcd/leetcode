@@ -6,7 +6,7 @@ package com.leetcode.huangcd;
  * Time: 5:25 PM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class RomanToInteger {
     private static int toNum(char c) {

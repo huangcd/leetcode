@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Time: 8:50 AM
  * <p/>
  *
- * @author chhuang@microsoft.com
+ * @author chhuang at live dot cn
  */
 public class SearchA2DMatrix {
     public boolean searchMatrix(int[][] matrix, int target) {
