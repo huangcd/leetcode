@@ -1,5 +1,7 @@
 package com.leetcode.huangcd;
 
+import java.util.HashMap;
+
 /**
  * Date: 12/1/13
  * <p/>
@@ -13,16 +15,36 @@ package com.leetcode.huangcd;
  */
 public class BalancedBinaryTree {
     public boolean isBalanced(TreeNode root) {
+        return isBalancedInternal(root, new HashMap<TreeNode, Integer>());
+    }
+
+    private boolean isBalancedInternal(TreeNode root, HashMap<TreeNode, Integer> cache) {
         if (root == null) {
             return true;
         }
-        return isBalanced(root.left) && isBalanced(root.right) && Math.abs(getHeight(root.left) - getHeight(root.right)) <= 1;
+        if (root.left == null && root.right != null && (root.right.left != null || root.right.right != null))
+        {
+            return false;
+        }
+        if (root.right == null && root.left != null && (root.left.left != null || root.left.right != null)) {
+            return false;
+        }
+        return Math.abs(getHeight(root.left, cache) - getHeight(root.right, cache)) <= 1
+                && isBalanced(root.left)
+                && isBalanced(root.right)
+                ;
     }
 
-    public int getHeight(TreeNode root) {
+    public int getHeight(TreeNode root, HashMap<TreeNode, Integer> cache) {
         if (root == null) {
             return 0;
         }
-        return 1 + Math.max(getHeight(root.left), getHeight(root.right));
+        if (cache.containsKey(root)) {
+            return cache.get(root);
+        }
+
+        int height = 1 + Math.max(getHeight(root.left, cache), getHeight(root.right, cache));
+        cache.put(root, height);
+        return height;
     }
 }

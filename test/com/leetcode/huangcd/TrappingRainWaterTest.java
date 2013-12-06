@@ -20,5 +20,14 @@ public class TrappingRainWaterTest {
         Assert.assertEquals(0, test.trap(new int[]{10, 1, 1, 1, 1, 1, 1}));
         Assert.assertEquals(0, test.trap(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}));
         Assert.assertEquals(5, test.trap(new int[]{2, 1, 1, 1, 1, 1, 2}));
+        int[] array = new int[10000];
+        for (int i = 0; i < 10000; i++) {
+            array[i] = i + 1;
+        }
+        Assert.assertEquals(0, test.trap(array));
+        for (int i = 0; i < 10000; i++) {
+            array[i] = 10000 - i;
+        }
+        Assert.assertEquals(0, test.trap(array));
     }
 }
