@@ -5,6 +5,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestRule;
 
+import java.io.FileInputStream;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -28,6 +30,23 @@ public class SortListTest {
         List<Integer> sortedList = new ArrayList<Integer>(list);
         Collections.sort(sortedList);
         assertArrayEquals(sortedList.toArray(), ListNode.toList(new SortList().sortList(ListNode.fromList(list))).toArray());
+    }
+
+    @Test
+    public void testLargeInput() throws Exception {
+        FileInputStream inputStream = new FileInputStream("list.txt");
+        ByteBuffer buffer = ByteBuffer.allocate(inputStream.available());
+        inputStream.getChannel().read(buffer);
+        byte[] bytes = buffer.array();
+        String string = new String(bytes);
+        String[] items = string.trim().split(",");
+        int size = 20000;
+        int[] numbers = new int[size];
+        for (int i = 0; i < size; i++) {
+            numbers[i] = Integer.parseInt(items[i]);
+        }
+        SortList test = new SortList();
+        test.sortList(ListNode.fromArray(numbers));
     }
 
     @Test
