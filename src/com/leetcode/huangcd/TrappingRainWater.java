@@ -35,6 +35,10 @@ public class TrappingRainWater {
             return 0;
         }
         int maxIndex = getMaxIndex(A, 0, toInclusive - 1);
+        while (toInclusive > 2 && (maxIndex == toInclusive - 1 || A[maxIndex] == A[toInclusive - 1])) {
+            toInclusive--;
+            maxIndex = getMaxIndex(A, 0, toInclusive - 1);
+        }
         int result = processLeft(A, maxIndex);
         for (int i = maxIndex + 1; i < toInclusive; i++) {
             assert (A[i] <= A[maxIndex] && A[i] <= A[toInclusive]);
@@ -48,6 +52,10 @@ public class TrappingRainWater {
             return 0;
         }
         int maxIndex = getMaxIndex(A, fromInclusive + 1, A.length - 1);
+        while (A.length - fromInclusive > 2 && (maxIndex == fromInclusive + 1 || A[maxIndex] == A[fromInclusive + 1])) {
+            fromInclusive++;
+            maxIndex = getMaxIndex(A, fromInclusive + 1, A.length - 1);
+        }
         int result = processRight(A, maxIndex);
         for (int i = fromInclusive + 1; i < maxIndex; i++) {
             assert (A[i] <= A[maxIndex] && A[i] <= A[fromInclusive]);

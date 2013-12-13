@@ -7,7 +7,6 @@ package com.leetcode.huangcd;
  * @author chhuang at live dot cn
  */
 public class SortList {
-
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
