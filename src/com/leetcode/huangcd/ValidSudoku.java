@@ -12,68 +12,64 @@ import java.util.Arrays;
  */
 public class ValidSudoku {
     public boolean isValidSudoku(char[][] board) {
+        short[] horizontal = new short[9];
+        short[] vertical = new short[9];
+        short[] grid = new short[9];
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                if (board[i][j] == '.') {
-                    boolean valid = false;
-                    for (char k = '1'; k <= '9'; k++) {
-                        board[i][j] = k;
-                        if (checkValid(board, i, j)) {
-                            valid = true;
-                            if (!isValidSudoku(board)) {
-                                 return false;
-                            }
-                        }
-                    }
-                    if (!valid) {
+                char c = board[i][j];
+                if (c != '.') {
+                    int val = 1 << (c - '1');
+                    if ((horizontal[i] & val) != 0) {
                         return false;
                     }
+                    horizontal[i] |= val;
+                    if ((vertical[j] & val) != 0) {
+                        return false;
+                    }
+                    vertical[j] |= val;
+                    if ((grid[i / 3 * 3 + j / 3] & val) != 0) {
+                        return false;
+                    }
+                    grid[i / 3 * 3 + j / 3] |= val;
                 }
             }
         }
+        // Only need to check whether the sudoku is valid or not (not consider whether there is a solution or not)
         return true;
+        // return solve(board, 0, horizontal, vertical, grid);
     }
 
-    private boolean[] used = new boolean[9];
-
-    private boolean checkValid(char[][] board, int i, int j) {
-        Arrays.fill(used, false);
-        for (int k = 0; k < 9; k++) {
-            char c = board[k][j];
-            if (c != '.') {
-                int val = c - '0';
-                if (used[val]) {
-                    return false;
-                }
-                used[val] = true;
+    public boolean solve(char[][] board, int n, short[] horizontal, short[] vertical, short[] grid) {
+        int i = n / 9;
+        int j = n % 9;
+        while (n < 81) {
+            if (board[i][j] == '.') {
+                break;
             }
+            n++;
+            i = n / 9;
+            j = n % 9;
         }
-        Arrays.fill(used, false);
-        for (int k = 0; k < 9; k++) {
-            char c = board[i][k];
-            if (c != '.') {
-                int val = c - '0';
-                if (used[val]) {
-                    return false;
+        if (n == 81) {
+            return true;
+        }
+        for (char c = '1'; c <= '9'; c++) {
+            board[i][j] = c;
+            int val = 1 << (c - '1');
+            if ((horizontal[i] & val) == 0 && (vertical[j] & val) == 0 && (grid[i / 3 * 3 + j / 3] & val) != 0) {
+                horizontal[i] |= val;
+                vertical[j] |= val;
+                grid[i / 3 * 3 + j / 3] |= val;
+                if (solve(board, n + 1, horizontal, vertical, grid)) {
+                    return true;
                 }
-                used[val] = true;
+                horizontal[i] ^= val;
+                vertical[j] ^= val;
+                grid[i / 3 * 3 + j / 3] ^= val;
             }
+            board[i][j] = '.';
         }
-        Arrays.fill(used, false);
-        int baseI = i / 3 * 3;
-        int baseJ = j / 3 * 3;
-        for (int ii = 0; ii < 3; ii++) {
-            for (int jj = 0; jj < 3; jj++) {
-                char c = board[baseI + ii][baseJ + jj];
-                if (c != '.') {
-                    int val = c - '0';
-                    if (used[val]) {
-                        return false;
-                    }
-                    used[val] = true;
-                }
-            }
-        }
-        return true;
+        return false;
     }
 }

@@ -37,5 +37,15 @@ public class SudokuSolverTest {
         for (char[] aBoard : board) {
             System.out.println(Arrays.toString(aBoard));
         }
+
+        boardString = new String[] {".87654321","2........","3........","4........","5........","6........","7........","8........","9........"};
+        board = new char[9][];
+        for (int i = 0; i < boardString.length; i++) {
+            board[i] = boardString[i].toCharArray();
+        }
+        test.solveSudoku(board);
+        for (char[] aBoard : board) {
+            System.out.println(Arrays.toString(aBoard));
+        }
     }
 }
