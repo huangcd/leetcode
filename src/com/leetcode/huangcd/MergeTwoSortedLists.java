@@ -5,7 +5,8 @@ package com.leetcode.huangcd;
  * <p/>
  * Time: 5:40 PM
  * <p/>
- * Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+ * Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the
+ * nodes of the first two lists.
  *
  * @author chhuang at live dot cn
  */

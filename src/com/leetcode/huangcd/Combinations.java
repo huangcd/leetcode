@@ -31,12 +31,12 @@ public class Combinations {
     private ArrayList<Integer> next(ArrayList<Integer> list, int n, int k) {
         int index = k - 1;
         while (index >= 0 && list.get(index) == n - (k - 1) + index) {
-            index --;
+            index--;
         }
         int val = list.get(index) + 1;
         for (int i = index; i < k; i++) {
             list.set(i, val);
-            val ++;
+            val++;
         }
         return list;
     }

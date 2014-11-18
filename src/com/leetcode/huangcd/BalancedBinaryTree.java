@@ -9,7 +9,8 @@ import java.util.HashMap;
  * <p/>
  * Given a binary tree, determine if it is height-balanced.
  * <p/>
- * For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+ * For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees
+ * of every node never differ by more than 1.
  *
  * @author chhuang at live dot cn
  */
@@ -22,17 +23,16 @@ public class BalancedBinaryTree {
         if (root == null) {
             return true;
         }
-        if (root.left == null && root.right != null && (root.right.left != null || root.right.right != null))
-        {
+        // fast return
+        if (root.left == null && root.right != null && (root.right.left != null || root.right.right != null)) {
             return false;
         }
         if (root.right == null && root.left != null && (root.left.left != null || root.left.right != null)) {
             return false;
         }
         return Math.abs(getHeight(root.left, cache) - getHeight(root.right, cache)) <= 1
-                && isBalanced(root.left)
-                && isBalanced(root.right)
-                ;
+               && isBalancedInternal(root.left, cache)
+               && isBalancedInternal(root.right, cache);
     }
 
     public int getHeight(TreeNode root, HashMap<TreeNode, Integer> cache) {

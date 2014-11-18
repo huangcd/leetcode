@@ -13,9 +13,8 @@ public class SingleNumberII {
         byte[] xor3Bytes = new byte[wordLength];
         for (int n : A) {
             for (int i = 0; i < wordLength; i++) {
-                if ((n & (1 << i)) != 0)
-                {
-                    xor3Bytes[i] ++;
+                if ((n & (1 << i)) != 0) {
+                    xor3Bytes[i]++;
                     if (xor3Bytes[i] == 3) {
                         xor3Bytes[i] = 0;
                     }

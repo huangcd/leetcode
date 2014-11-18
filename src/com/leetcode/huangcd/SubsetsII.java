@@ -21,8 +21,7 @@ public class SubsetsII {
         for (int n : num) {
             if (!counts.containsKey(n)) {
                 counts.put(n, 1);
-            }
-            else {
+            } else {
                 counts.put(n, counts.get(n) + 1);
             }
         }

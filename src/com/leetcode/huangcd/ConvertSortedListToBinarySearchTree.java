@@ -26,7 +26,7 @@ public class ConvertSortedListToBinarySearchTree {
         ListNode p = head;
         while (mid > 1) {
             p = p.next;
-            mid --;
+            mid--;
         }
         TreeNode root = new TreeNode(p.next.val);
         root.right = sortedListToBST(p.next.next);
@@ -39,7 +39,7 @@ public class ConvertSortedListToBinarySearchTree {
         int i = 0;
         while (head != null) {
             head = head.next;
-            i ++;
+            i++;
         }
         return i;
     }

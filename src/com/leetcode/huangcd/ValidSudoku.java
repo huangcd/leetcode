@@ -11,6 +11,8 @@ import java.util.Arrays;
  * @author chhuang at live dot cn
  */
 public class ValidSudoku {
+    private boolean[] used = new boolean[9];
+
     public boolean isValidSudoku(char[][] board) {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -21,7 +23,7 @@ public class ValidSudoku {
                         if (checkValid(board, i, j)) {
                             valid = true;
                             if (!isValidSudoku(board)) {
-                                 return false;
+                                return false;
                             }
                         }
                     }
@@ -33,8 +35,6 @@ public class ValidSudoku {
         }
         return true;
     }
-
-    private boolean[] used = new boolean[9];
 
     private boolean checkValid(char[][] board, int i, int j) {
         Arrays.fill(used, false);

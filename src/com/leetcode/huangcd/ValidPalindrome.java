@@ -26,7 +26,7 @@ public class ValidPalindrome {
         int backwardIndex = s.length() - 1;
         boolean valid = true;
         while (forwardIndex < backwardIndex) {
-            while (forwardIndex < s.length() &&  !isAlphabetic(s.charAt(forwardIndex))) {
+            while (forwardIndex < s.length() && !isAlphabetic(s.charAt(forwardIndex))) {
                 forwardIndex++;
             }
             if (forwardIndex >= s.length()) {

@@ -16,20 +16,21 @@ import java.util.regex.Pattern;
  * "1 a" => false
  * "2e10" => true
  * <p/>
- * Note: It is intended for the problem statement to be ambiguous. You should gather all requirements up front before implementing one.
+ * Note: It is intended for the problem statement to be ambiguous. You should gather all requirements up front before
+ * implementing one.
  *
  * @author chhuang at live dot cn
  */
 public class ValidNumber {
-    Pattern decimalPattern = Pattern.compile("[+-]?[0-9]+(\\.[0-9]*)?(e[0-9]*)?", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
-    Pattern hexPattern = Pattern.compile("[+-]?0x[0-9a-f]+", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+    Pattern decimalPattern = Pattern.compile("[+-]?[0-9]+(\\.[0-9]*)?(e[0-9]*)?",
+                                             Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+    Pattern hexPattern     = Pattern.compile("[+-]?0x[0-9a-f]+", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
 
     public boolean isNumber(String s) {
         s = s.trim();
         if (decimalPattern.matcher(s).matches()) {
             return true;
-        }
-        else if (hexPattern.matcher(s).matches()) {
+        } else if (hexPattern.matcher(s).matches()) {
             return true;
         }
         return false;

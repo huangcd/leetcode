@@ -24,7 +24,7 @@ public class PlusOne {
         result = new int[size];
         System.arraycopy(digits, 0, result, 0, size);
         Arrays.fill(result, index + 1, size, 0);
-        result[index] ++;
+        result[index]++;
         return result;
     }
 

@@ -12,7 +12,7 @@ import java.util.HashMap;
  */
 public class BinaryTreeMaximumPathSum {
     // KEY1: use global variable to represent multi return
-    private int currentMax;
+    private int                        currentMax;
     // KEY2: use cache to reduce redundant calculation
     private HashMap<TreeNode, Integer> cache;
 

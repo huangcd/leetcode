@@ -16,7 +16,7 @@ public class ReverseLinkedListII {
         head = vHead;
         while (index < m) {
             head = head.next;
-            index ++;
+            index++;
         }
         ListNode p = head.next;
         ListNode tail = p;
@@ -26,7 +26,7 @@ public class ReverseLinkedListII {
             p.next = head.next;
             head.next = p;
             p = q;
-            index ++;
+            index++;
             tail.next = q;
         }
         return vHead.next;

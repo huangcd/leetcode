@@ -38,6 +38,5 @@ public class BalancedBinaryTreeTest {
             node = node.left;
         }
         Assert.assertEquals(1000001, test.getHeight(root, new HashMap<TreeNode, Integer>()));
-
     }
 }

@@ -34,8 +34,7 @@ public class SearchA2DMatrix {
             }
             if (matrix[nn][0] > target) {
                 n2 = nn;
-            }
-            else if (matrix[nn][m - 1] < target) {
+            } else if (matrix[nn][m - 1] < target) {
                 n1 = nn + 1;
             }
         }

@@ -8,7 +8,8 @@ import java.util.HashMap;
  * <p/>
  * Time: 1:48 PM
  * <p/>
- * A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+ * A linked list is given such that each node contains an additional random pointer which could point to any node in
+ * the list or null.
  * <p/>
  * Return a deep copy of the list.
  *

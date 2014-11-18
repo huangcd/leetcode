@@ -22,7 +22,7 @@ public class ValidateBinarySearchTree {
                 return false;
             }
             if (!isValidBST(root.left)) {
-                 return false;
+                return false;
             }
         }
         if (root.right != null) {

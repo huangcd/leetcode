@@ -12,42 +12,6 @@ import java.util.HashSet;
  * @author chhuang at live dot cn
  */
 public class MaxPointOnALine {
-    final class Tuple {
-        int a;
-        int b;
-        int c;
-
-        Tuple(int a, int b, int c) {
-            this.a = a;
-            this.b = b;
-            this.c = c;
-        }
-
-        Tuple(int[] array) {
-            this.a = array[0];
-            this.b = array[1];
-            this.c = array[2];
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-
-            Tuple tuple = (Tuple) o;
-
-            return a == tuple.a && b == tuple.b && c == tuple.c;
-        }
-
-        @Override
-        public int hashCode() {
-            int result = a;
-            result = 31 * result + b;
-            result = 31 * result + c;
-            return result;
-        }
-    }
-
     public int maxPoints(Point[] points) {
         if (points == null || points.length == 0) {
             return 0;
@@ -111,5 +75,41 @@ public class MaxPointOnALine {
             return a;
         }
         return gcd(b, a % b);
+    }
+
+    final class Tuple {
+        int a;
+        int b;
+        int c;
+
+        Tuple(int a, int b, int c) {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+
+        Tuple(int[] array) {
+            this.a = array[0];
+            this.b = array[1];
+            this.c = array[2];
+        }
+
+        @Override
+        public int hashCode() {
+            int result = a;
+            result = 31 * result + b;
+            result = 31 * result + c;
+            return result;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) { return true; }
+            if (o == null || getClass() != o.getClass()) { return false; }
+
+            Tuple tuple = (Tuple) o;
+
+            return a == tuple.a && b == tuple.b && c == tuple.c;
+        }
     }
 }

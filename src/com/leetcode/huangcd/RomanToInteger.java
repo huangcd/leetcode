@@ -36,8 +36,7 @@ public class RomanToInteger {
         for (int i = 0, max = size - 1; i < max; i++) {
             if (toNum(s.charAt(i)) >= toNum(s.charAt(i + 1))) {
                 result += toNum(s.charAt(i));
-            }
-            else {
+            } else {
                 result -= toNum(s.charAt(i));
             }
         }

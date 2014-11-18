@@ -1,6 +1,6 @@
 package com.leetcode.huangcd;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
