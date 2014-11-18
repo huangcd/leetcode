@@ -16,7 +16,7 @@ import java.util.Arrays;
  *
  * @author chhuang at live dot cn
  */
-public class Permutations {
+public class PermutationsII {
     public ArrayList<ArrayList<Integer>> permute(int[] num) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         int n = num.length;
@@ -40,26 +40,26 @@ public class Permutations {
         return result;
     }
 
-    private void next(int[] num) {
-        int n = num.length;
+    private void next(int[] list) {
+        int n = list.length;
         int index = n - 1;
-        while (index > 0 && num[index] < num[index - 1]) {
+        while (index > 0 && list[index] < list[index - 1]) {
             index--;
         }
         if (index != 0) {
             int swapIndex = n - 1;
-            while (num[swapIndex] < num[index - 1]) {
+            while (list[swapIndex] < list[index - 1]) {
                 swapIndex--;
             }
-            swap(num, index - 1, swapIndex);
-            Arrays.sort(num, index, n);
+            swap(list, index - 1, swapIndex);
+            Arrays.sort(list, index, n);
         }
     }
 
-    private void swap(int[] num, int i, int j) {
-        int temp = num[i];
-        num[i] = num[j];
-        num[j] = temp;
+    private void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 
     private boolean hasNext(int[] array) {

@@ -1,7 +1,5 @@
 package com.leetcode.huangcd;
 
-import java.util.Arrays;
-
 /**
  * Date: 12/7/13
  * <p/>
@@ -11,69 +9,31 @@ import java.util.Arrays;
  * @author chhuang at live dot cn
  */
 public class ValidSudoku {
-    private boolean[] used = new boolean[9];
-
     public boolean isValidSudoku(char[][] board) {
+        short[] horizontal = new short[9];
+        short[] vertical = new short[9];
+        short[] grid = new short[9];
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                if (board[i][j] == '.') {
-                    boolean valid = false;
-                    for (char k = '1'; k <= '9'; k++) {
-                        board[i][j] = k;
-                        if (checkValid(board, i, j)) {
-                            valid = true;
-                            if (!isValidSudoku(board)) {
-                                return false;
-                            }
-                        }
-                    }
-                    if (!valid) {
-                        return false;
-                    }
-                }
-            }
-        }
-        return true;
-    }
-
-    private boolean checkValid(char[][] board, int i, int j) {
-        Arrays.fill(used, false);
-        for (int k = 0; k < 9; k++) {
-            char c = board[k][j];
-            if (c != '.') {
-                int val = c - '0';
-                if (used[val]) {
-                    return false;
-                }
-                used[val] = true;
-            }
-        }
-        Arrays.fill(used, false);
-        for (int k = 0; k < 9; k++) {
-            char c = board[i][k];
-            if (c != '.') {
-                int val = c - '0';
-                if (used[val]) {
-                    return false;
-                }
-                used[val] = true;
-            }
-        }
-        Arrays.fill(used, false);
-        int baseI = i / 3 * 3;
-        int baseJ = j / 3 * 3;
-        for (int ii = 0; ii < 3; ii++) {
-            for (int jj = 0; jj < 3; jj++) {
-                char c = board[baseI + ii][baseJ + jj];
+                char c = board[i][j];
                 if (c != '.') {
-                    int val = c - '0';
-                    if (used[val]) {
+                    int val = 1 << (c - '1');
+                    if ((horizontal[i] & val) != 0) {
                         return false;
                     }
-                    used[val] = true;
+                    horizontal[i] |= val;
+                    if ((vertical[j] & val) != 0) {
+                        return false;
+                    }
+                    vertical[j] |= val;
+                    if ((grid[i / 3 * 3 + j / 3] & val) != 0) {
+                        return false;
+                    }
+                    grid[i / 3 * 3 + j / 3] |= val;
                 }
             }
         }
         return true;
+        // return solve(board, 0, horizontal, vertical, grid);
     }
 }
